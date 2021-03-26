@@ -1,7 +1,8 @@
 {
   "license": "MIT",
   "scripts": {
-    "test": "ts-node -r dotenv-override-true/config src/index.ts"
+    "test": "ts-node -r dotenv-override-true/config src/index.ts",
+    "serve": "webpack serve"
   },
   "dependencies": {
     "@rc-ex/core": "^0.7.1",
@@ -9,10 +10,16 @@
   },
   "devDependencies": {
     "@types/node": "^14.14.36",
+    "buffer": "^6.0.3",
     "dotenv-override-true": "^6.2.2",
     "gts": "^3.1.0",
+    "html-webpack-plugin": "^5.3.1",
+    "ts-loader": "^8.0.18",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.3",
+    "webpack": "^5.28.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2",
     "yarn-upgrade-all": "^0.5.4"
   }
 }
