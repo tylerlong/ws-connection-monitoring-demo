@@ -14,12 +14,11 @@ const rc = new RingCentral({
   });
   const webSocketExtension = new WebSocketExtension({
     restOverWebSocket: true,
-    // debugMode: true,
+    debugMode: true,
     autoRecover: {enabled: false},
   });
   await rc.installExtension(webSocketExtension);
   const ws = webSocketExtension.ws;
-  // (window as any).ws = ws;
   ws.addEventListener('close', () => {
     console.log('close');
   });
@@ -27,17 +26,7 @@ const rc = new RingCentral({
     console.log('ping', new Date());
   });
 
-  // ws.addEventListener('message', event => {
-  //   console.log('message', event);
-  // });
-
-  // window.addEventListener('offline', () => {
-  //   console.log('offline');
-  // });
-  // setInterval(async () => {
-  //   // await rc.scim().health().get();
-  //   await rc.restapi().account().extension().get();
-  //   // ws.ping();
-  //   // ws.send('');
-  // }, 10000);
+  ws.addEventListener('message', event => {
+    console.log('message', event);
+  });
 })();
