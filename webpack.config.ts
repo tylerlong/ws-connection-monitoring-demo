@@ -2,11 +2,12 @@
 /* eslint-disable node/no-unpublished-require */
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import dotenv from 'dotenv-override-true';
-import {DefinePlugin} from 'webpack';
+import {DefinePlugin, Configuration} from 'webpack';
 
-const config = {
+const config: Configuration = {
   mode: 'development',
   entry: './src/index.ts',
+  devtool: 'source-map',
   module: {
     rules: [
       {

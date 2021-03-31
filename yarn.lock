@@ -71,20 +71,20 @@
     "@nodelib/fs.scandir" "2.1.4"
     fastq "^1.6.0"
 
-"@rc-ex/core@^0.7.1":
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/@rc-ex/core/-/core-0.7.1.tgz#ecf30b7e23b34a38be07bae3943c90a1f21bc455"
-  integrity sha512-MX+/5rxRfzTN9jMLjGWzUEJiZu0+wAZWwcBi1QWUANF3xc0eewS7P3g0ZfBo6GufqZ5T39NaGQMGe1AP4phF1A==
+"@rc-ex/core@^0.7.2":
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/@rc-ex/core/-/core-0.7.2.tgz#d133e0e4175aaa12cc20f499bff5406eb7d767cc"
+  integrity sha512-NCE9tMcQNk2fCOmRLU3oPNGOtwt7pxgI1RHvox0P2/OmjqiAce6vfOkACKG2rCF+XLBZJL2xUrSgGsxTtndUmw==
   dependencies:
     "@types/qs" "^6.9.6"
     axios "^0.21.1"
     form-data "^4.0.0"
-    qs "^6.9.6"
+    qs "^6.10.1"
 
-"@rc-ex/ws@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@rc-ex/ws/-/ws-0.8.0.tgz#335950eec2a724124af004e92d4f37ec772fa027"
-  integrity sha512-b249VU2RaISGXgzzB2ZKc4TADlz1jwT4AxBJQ4vEEo604Rl7WHfaBnYOsvDOa1Bk4Vu18DDLg8/CpGJXrwLU5Q==
+"@rc-ex/ws@^0.8.1":
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/@rc-ex/ws/-/ws-0.8.1.tgz#15ddc7ac660fb5e129eb498ffa252ae45f86ccf8"
+  integrity sha512-3v1vAk2K13LYs+OV+agMI5JRsYAArqpJGnChin/bDpk4RMbNVhyQ5TUjAbyajxcZEUkNPncripIPDEu2+kwM/A==
   dependencies:
     "@types/ws" "^7.4.0"
     http-status-codes "^2.1.4"
@@ -3715,7 +3715,7 @@ qs@6.7.0:
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.7.0.tgz#41dc1a015e3d581f1621776be31afb2876a9b1bc"
   integrity sha512-VCdBRNFTX1fyE7Nb6FYoURo/SPe62QCaAyzJvUjwRaIsc+NePBEniHlvxFmmX56+HZphIGtV0XeCirBtpDrTyQ==
 
-qs@^6.9.6:
+qs@^6.10.1:
   version "6.10.1"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.10.1.tgz#4931482fa8d647a5aab799c5271d2133b981fb6a"
   integrity sha512-M528Hph6wsSVOBiYUnGf+K/7w0hNshs/duGsNXPUCLH5XAqjEtiPGwNONLV0tBH8NoGb0mvD5JubnUTrujKDTg==

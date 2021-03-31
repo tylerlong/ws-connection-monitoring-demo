@@ -12,27 +12,32 @@ const rc = new RingCentral({
     extension: process.env.RINGCENTRAL_EXTENSION!,
     password: process.env.RINGCENTRAL_PASSWORD!,
   });
-  const webSocketExtension = new WebSocketExtension();
+  const webSocketExtension = new WebSocketExtension({
+    restOverWebSocket: true,
+    // debugMode: true,
+    autoRecover: {enabled: false},
+  });
   await rc.installExtension(webSocketExtension);
   const ws = webSocketExtension.ws;
-  ws.onopen = () => {
-    console.log('Open event');
-  };
-  ws.onclose = () => {
-    console.log('Close event');
-  };
-  ws.onerror = () => {
-    console.log('Error event');
-  };
-  ws.onmessage = event => {
-    console.log('Message', event);
-  };
-  ws.on('pong', () => {
-    console.log('pong');
+  // (window as any).ws = ws;
+  ws.addEventListener('close', () => {
+    console.log('close');
+  });
+  ws.addEventListener('ping', () => {
+    console.log('ping', new Date());
   });
 
-  setInterval(() => {
-    ws.ping();
-  }, 3000);
-  ws.ping();
+  // ws.addEventListener('message', event => {
+  //   console.log('message', event);
+  // });
+
+  // window.addEventListener('offline', () => {
+  //   console.log('offline');
+  // });
+  // setInterval(async () => {
+  //   // await rc.scim().health().get();
+  //   await rc.restapi().account().extension().get();
+  //   // ws.ping();
+  //   // ws.send('');
+  // }, 10000);
 })();

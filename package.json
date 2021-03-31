@@ -5,8 +5,8 @@
     "serve": "webpack serve"
   },
   "dependencies": {
-    "@rc-ex/core": "^0.7.1",
-    "@rc-ex/ws": "^0.8.0"
+    "@rc-ex/core": "^0.7.2",
+    "@rc-ex/ws": "^0.8.1"
   },
   "devDependencies": {
     "@types/node": "^14.14.36",
