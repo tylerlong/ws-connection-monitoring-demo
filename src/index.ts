@@ -15,18 +15,7 @@ const rc = new RingCentral({
   const webSocketExtension = new WebSocketExtension({
     restOverWebSocket: true,
     debugMode: true,
-    autoRecover: {enabled: false},
+    autoRecover: {enabled: true},
   });
   await rc.installExtension(webSocketExtension);
-  const ws = webSocketExtension.ws;
-  ws.addEventListener('close', () => {
-    console.log('close');
-  });
-  ws.addEventListener('ping', () => {
-    console.log('ping', new Date());
-  });
-
-  ws.addEventListener('message', event => {
-    console.log('message', event);
-  });
 })();
