@@ -2,7 +2,8 @@
   "license": "MIT",
   "scripts": {
     "test": "ts-node -r dotenv-override-true/config src/index.ts",
-    "serve": "webpack serve"
+    "serve": "webpack serve",
+    "release": "webpack"
   },
   "dependencies": {
     "@rc-ex/core": "^0.8.1",

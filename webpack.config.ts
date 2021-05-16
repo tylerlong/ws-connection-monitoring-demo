@@ -3,10 +3,14 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import dotenv from 'dotenv-override-true';
 import {DefinePlugin, Configuration} from 'webpack';
+import path from 'path';
 
 const config: Configuration = {
   mode: 'development',
   entry: './src/index.ts',
+  output: {
+    path: path.resolve(__dirname, 'docs'),
+  },
   devtool: 'source-map',
   module: {
     rules: [
