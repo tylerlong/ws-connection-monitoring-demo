@@ -7,7 +7,8 @@
   },
   "dependencies": {
     "@rc-ex/core": "^0.8.1",
-    "@rc-ex/ws": "^0.9.9"
+    "@rc-ex/ws": "^0.9.9",
+    "wait-for-async": "^0.5.0"
   },
   "devDependencies": {
     "@types/node": "^15.3.0",

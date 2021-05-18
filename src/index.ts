@@ -1,5 +1,6 @@
 import RingCentral from '@rc-ex/core';
 import WebSocketExtension from '@rc-ex/ws';
+import waitFor from 'wait-for-async';
 
 const rc = new RingCentral({
   clientId: process.env.RINGCENTRAL_CLIENT_ID!,
@@ -18,4 +19,10 @@ const rc = new RingCentral({
     autoRecover: {enabled: true},
   });
   await rc.installExtension(webSocketExtension);
+
+  // eslint-disable-next-line no-constant-condition
+  while (true) {
+    await waitFor({interval: 30 * 60 * 1000});
+    await rc.refresh();
+  }
 })();
